@@ -42,18 +42,18 @@ If the "Copy //" option is not behaving as expected there are a couple things yo
    
   __If Powershell is not located in the path noted above:__
   
-    1. Copy the proper path to _powershell.exe_.
-    2. Open _SwitchSlashes.reg_ in a text editor.
-    3. Locate the _`[HKEY_CLASSES_ROOT ... SwitchSlashes.ForwardSlash\command]`_ portions of the registry file.
-    4. Replace the path like so:
+   1. Copy the proper path to _powershell.exe_.
+   2. Open _SwitchSlashes.reg_ in a text editor.
+   3. Locate the _`[HKEY_CLASSES_ROOT ... SwitchSlashes.ForwardSlash\command]`_ portions of the registry file.
+   4. Replace the path like so:
     
-    __BEFORE:__ `@="c:\\windows\\system32\\WindowsPowerShell\\v1.0\\powershell.exe ...`
+   __BEFORE:__ `@="c:\\windows\\system32\\WindowsPowerShell\\v1.0\\powershell.exe ...`
     
-    __AFTER:__ `@="c:\\new\\path\\to\\powershell.exe ...`
+   __AFTER:__ `@="c:\\new\\path\\to\\powershell.exe ...`
     
-    __IMPORTANT:__ mind the double `\\` backslashes. They are required when modifying the _SwitchSlashes.reg_ file. If you are directly modifying the registry the double `\\` backslashes are not required.
+   __IMPORTANT:__ mind the double `\\` backslashes. They are required when modifying the _SwitchSlashes.reg_ file. If you are directly modifying the registry the double `\\` backslashes are not required.
     
-    5. Save the _SwitchSlashes.reg_ file, run the _Remove-SwitchSlashes.reg_ file if needed, and rerun _SwitchSlashes.reg_.
+   5. Save the _SwitchSlashes.reg_ file, run the _Remove-SwitchSlashes.reg_ file if needed, and rerun _SwitchSlashes.reg_.
   * If all else fails, you can include -NoExit to the registry key commands like so:
   
     __BEFORE:__ `@="c:\\windows\\system32\\WindowsPowerShell\\v1.0\\powershell.exe \"-command\" ...`
