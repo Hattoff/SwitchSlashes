@@ -1,0 +1,5 @@
+Windows Registry Editor Version 5.00
+; Run this registry file to remove the keys added by SwitchSlashes.reg
+[-HKEY_CLASSES_ROOT\Directory\shell\SwitchSlashes.ForwardSlash]
+[-HKEY_CLASSES_ROOT\*\shell\SwitchSlashes.ForwardSlash]
+[-HKEY_CLASSES_ROOT\Directory\Background\shell\SwitchSlashes.ForwardSlash]

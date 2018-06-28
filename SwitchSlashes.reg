@@ -1,0 +1,30 @@
+Windows Registry Editor Version 5.00
+
+; This will appear when you hold Shift and Right Click ON a folder:
+[HKEY_CLASSES_ROOT\Directory\shell\SwitchSlashes.ForwardSlash]
+@="Copy //"
+; Comment out this "Extended" line if you do not want to hold Shift before Right Clicking.
+"Extended"=""
+
+[HKEY_CLASSES_ROOT\Directory\shell\SwitchSlashes.ForwardSlash\command]
+@="c:\\windows\\system32\\WindowsPowerShell\\v1.0\\powershell.exe \"-command\" \"\"$Path =\"\\\"%1\\\"\"; $ReplaceStr = '\\\\'; $OppositeStr = '/'; try{ if(!$Path){$Path = get-clipboard}; $NewPath = $Path -replace $ReplaceStr, $OppositeStr; set-clipboard($NewPath); } catch{};\""
+; ************************************************************
+
+; This will appear when you hold Shift and right click a file:
+[HKEY_CLASSES_ROOT\*\shell\SwitchSlashes.ForwardSlash]
+@="Copy //"
+; Comment out this "Extended" line if you do not want to hold Shift before Right Clicking.
+"Extended"=""
+
+[HKEY_CLASSES_ROOT\*\shell\SwitchSlashes.ForwardSlash\command]
+@="c:\\windows\\system32\\WindowsPowerShell\\v1.0\\powershell.exe \"-command\" \"\"$Path =\"\\\"%1\\\"\"; $ReplaceStr = '\\\\'; $OppositeStr = '/'; try{ if(!$Path){$Path = get-clipboard}; $NewPath = $Path -replace $ReplaceStr, $OppositeStr; set-clipboard($NewPath); } catch{};\""
+; ************************************************************
+
+; This will appear when you hold Shift and Right Click INSIDE a folder:
+[HKEY_CLASSES_ROOT\Directory\Background\shell\SwitchSlashes.ForwardSlash]
+; Comment out this "Extended" line if you do not want to hold Shift before Right Clicking.
+"Extended"=""
+@="Copy //"
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\SwitchSlashes.ForwardSlash\command]
+@="c:\\windows\\system32\\WindowsPowerShell\\v1.0\\powershell.exe \"-command\" \"\"$Path =\"\\\"%v\\\"\"; $ReplaceStr = '\\\\'; $OppositeStr = '/'; try{ if(!$Path){$Path = get-clipboard}; $NewPath = $Path -replace $ReplaceStr, $OppositeStr; set-clipboard($NewPath); } catch{};\""
