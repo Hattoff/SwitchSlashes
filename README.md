@@ -62,4 +62,4 @@ If the "Copy //" option is not behaving as expected there are a couple things yo
    
      Save the _SwitchSlashes.reg_ file, run the _Remove-SwitchSlashes.reg_ file if needed, and rerun _SwitchSlashes.reg_. 
      
-     Now, when the "Copy //" context menu option is pressed, the Powerscript will remain open and you can further debug the issue.
+     Now, when the "Copy //" context menu option is pressed, the Powershell script will remain open and you can further debug the issue.
