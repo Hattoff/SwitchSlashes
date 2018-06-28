@@ -39,7 +39,9 @@ If the "Copy //" option is not behaving as expected there are a couple things yo
  * Check the install path of Powershell; it may be different on your machine, and require you to modify the _SwitchSlashes.reg_ file.
 
    Powershell will normally be located in __`c:\windows\system32\WindowsPowerShell\v1.0\powershell.exe`__
+   
   __If Powershell is not located in the path noted above:__
+  
     1. Copy the proper path to _powershell.exe_.
     2. Open _SwitchSlashes.reg_ in a text editor.
     3. Locate the _`[HKEY_CLASSES_ROOT ... SwitchSlashes.ForwardSlash\command]`_ portions of the registry file.
